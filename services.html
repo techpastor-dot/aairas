@@ -3,89 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services & Price List | AAIRA'S LAUNDRY SERVICES — Warri, Nigeria</title>
-  <meta name="description" content="Full price list for laundry services in Warri. Affordable pricing for polo, gowns, duvets, bedsheets and more." />
+  <title>Services & Price List | AAIRA'S LAUNDRY SERVICES — Warri</title>
+  <meta name="description" content="Full laundry price list in Warri. Affordable pricing for polo, gowns, duvets, bedsheets and more. Ready in 48 hours." />
   <meta name="robots" content="index, follow" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { display: ['"DM Serif Display"', 'serif'], body: ['"DM Sans"', 'sans-serif'] },
-          screens: { xs: '375px', sm: '640px', md: '768px', lg: '1024px', xl: '1280px' }
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="shared.css" />
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['"DM Serif Display"','serif'],body:['"DM Sans"','sans-serif']},screens:{xs:'375px',sm:'640px',md:'768px',lg:'1024px',xl:'1280px'}}}}</script>
+  <link rel="stylesheet" href="/shared.css" />
 </head>
 <body class="bg-white text-gray-800 antialiased">
 
-<!-- ── NAV ── -->
+<!-- ════ NAV ════ -->
 <nav class="fixed top-0 inset-x-0 z-50 bg-white/85 border-b border-sky-100 shadow-sm" style="backdrop-filter:blur(14px);">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
+    <a href="/" class="flex items-center gap-2 flex-shrink-0">
       <div class="w-9 h-9 rounded-full bg-sky-500 flex items-center justify-center text-white text-lg font-bold" style="font-family:'DM Serif Display',serif;">A</div>
-      <div>
-        <div class="text-sky-700 text-sm leading-tight font-semibold tracking-wide" style="font-family:'DM Serif Display',serif;">AAIRA'S</div>
-        <div class="text-xs text-sky-400 leading-none tracking-widest uppercase">Laundry Services</div>
-      </div>
+      <div><div class="text-sky-700 text-sm leading-tight font-semibold tracking-wide" style="font-family:'DM Serif Display',serif;">AAIRA'S</div><div class="text-xs text-sky-400 leading-none tracking-widest uppercase">Laundry Services</div></div>
     </a>
-    <div class="hidden md:flex items-center gap-6 text-sm text-gray-600 font-medium">
-      <a href="index.html"    class="nav-link">Home</a>
-      <a href="services.html" class="nav-link active">Services</a>
-      <a href="order.html"    class="nav-link">Order</a>
-      <a href="contact.html"  class="nav-link">Contact</a>
-      <a href="https://wa.me/2349127461108" target="_blank" rel="noopener"
-         class="bg-sky-500 text-white px-4 py-2 rounded-full hover:bg-sky-600 transition-colors">WhatsApp Us</a>
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="/"         class="nav-link">Home</a>
+      <a href="/services" class="nav-link active">Services</a>
+      <a href="/order"    class="nav-link">Order</a>
+      <a href="/contact"  class="nav-link">Contact</a>
+      <a href="https://wa.me/2349127461108" target="_blank" rel="noopener" class="bg-sky-500 text-white px-4 py-2 rounded-full hover:bg-sky-600 transition-colors">WhatsApp Us</a>
     </div>
-    <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false"
-            class="md:hidden flex flex-col gap-1.5 p-2 -mr-2 rounded-lg">
+    <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" class="md:hidden flex flex-col gap-1.5 p-2 -mr-2 rounded-lg">
       <span id="bar1" class="ham-bar"></span><span id="bar2" class="ham-bar"></span><span id="bar3" class="ham-bar"></span>
     </button>
   </div>
   <div id="mobile-menu" class="md:hidden bg-white border-t border-sky-50 px-4 overflow-hidden" style="max-height:0;transition:max-height .3s ease;">
     <div class="py-3 flex flex-col gap-1">
-      <a href="index.html"    onclick="closeMenu()" class="mob-link">🏠 Home</a>
-      <a href="services.html" onclick="closeMenu()" class="mob-link font-semibold text-sky-600">🧺 Services &amp; Prices</a>
-      <a href="order.html"    onclick="closeMenu()" class="mob-link">📋 Place Order</a>
-      <a href="contact.html"  onclick="closeMenu()" class="mob-link">📍 Contact</a>
+      <a href="/"         onclick="closeMenu()" class="mob-link">🏠 Home</a>
+      <a href="/services" onclick="closeMenu()" class="mob-link font-semibold text-sky-600">🧺 Services &amp; Prices</a>
+      <a href="/order"    onclick="closeMenu()" class="mob-link">📋 Place Order</a>
+      <a href="/contact"  onclick="closeMenu()" class="mob-link">📍 Contact</a>
       <div class="flex gap-2 mt-1 pt-2 border-t border-sky-50">
         <a href="tel:08134112989" class="flex-1 text-center bg-sky-100 text-sky-700 font-semibold py-3 rounded-xl text-sm">📞 Call</a>
-        <a href="https://wa.me/2349127461108" target="_blank" rel="noopener"
-           class="flex-1 text-center bg-green-500 text-white font-semibold py-3 rounded-xl text-sm">💬 WhatsApp</a>
+        <a href="https://wa.me/2349127461108" target="_blank" rel="noopener" class="flex-1 text-center bg-green-500 text-white font-semibold py-3 rounded-xl text-sm">💬 WhatsApp</a>
       </div>
     </div>
   </div>
 </nav>
 
-<!-- ── PAGE HERO ── -->
+<!-- ════ PAGE HERO ════ -->
 <section class="bg-gradient-to-br from-sky-50 to-white pt-28 pb-10 md:pt-32 md:pb-14">
   <div class="max-w-6xl mx-auto px-4 text-center">
-    <div class="fade-up inline-flex items-center gap-2 bg-white border border-sky-200 text-sky-600 text-xs font-semibold px-4 py-2 rounded-full mb-4 shadow-sm">
-      🧴 Full Price List
-    </div>
+    <div class="fade-up inline-flex items-center gap-2 bg-white border border-sky-200 text-sky-600 text-xs font-semibold px-4 py-2 rounded-full mb-4 shadow-sm">🧴 Full Price List</div>
     <h1 class="fade-up delay-100 text-gray-900 mb-3" style="font-family:'DM Serif Display',serif;font-size:clamp(2rem,6vw,3.5rem);">Services &amp; Pricing</h1>
-    <p class="fade-up delay-200 text-gray-400 max-w-md mx-auto text-sm md:text-base">
-      Transparent, affordable pricing for every garment. All prices in Nigerian Naira (₦).
-    </p>
+    <p class="fade-up delay-200 text-gray-400 max-w-md mx-auto text-sm md:text-base">Transparent, affordable pricing for every garment. All prices in Nigerian Naira (₦).</p>
   </div>
 </section>
 
-<!-- ── PRICE GRID ── -->
+<!-- ════ PRICE GRID ════ -->
 <section class="bg-white py-10 md:py-14">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-4" id="price-grid">
-      <!-- Injected by JS -->
-    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-4" id="price-grid"></div>
   </div>
 </section>
 
-<!-- ── WHAT WE OFFER ── -->
-<section class="bg-sky-50 py-14 md:py-16">
+<!-- ════ WHAT'S INCLUDED ════ -->
+<section class="bg-sky-50 py-14">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-10 fade-up">
       <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(1.5rem,4vw,2.25rem);">What's Included</h2>
@@ -93,76 +72,65 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="fade-up delay-100 bg-white rounded-2xl p-5 shadow-sm border border-sky-50 text-center">
-        <div class="text-3xl mb-3">👕</div>
-        <h3 class="font-semibold text-gray-800 mb-1">Careful Washing</h3>
-        <p class="text-gray-500 text-xs leading-relaxed">Sorted by color and fabric type for safe cleaning.</p>
+        <div class="text-3xl mb-3">👕</div><h3 class="font-semibold text-gray-800 mb-1 text-sm">Careful Washing</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">Sorted by colour and fabric type for safe cleaning.</p>
       </div>
       <div class="fade-up delay-200 bg-white rounded-2xl p-5 shadow-sm border border-sky-50 text-center">
-        <div class="text-3xl mb-3">♨️</div>
-        <h3 class="font-semibold text-gray-800 mb-1">Expert Ironing</h3>
+        <div class="text-3xl mb-3">♨️</div><h3 class="font-semibold text-gray-800 mb-1 text-sm">Expert Ironing</h3>
         <p class="text-gray-500 text-xs leading-relaxed">Properly pressed and folded, ready to wear.</p>
       </div>
       <div class="fade-up delay-300 bg-white rounded-2xl p-5 shadow-sm border border-sky-50 text-center">
-        <div class="text-3xl mb-3">📦</div>
-        <h3 class="font-semibold text-gray-800 mb-1">Neatly Packaged</h3>
+        <div class="text-3xl mb-3">📦</div><h3 class="font-semibold text-gray-800 mb-1 text-sm">Neatly Packaged</h3>
         <p class="text-gray-500 text-xs leading-relaxed">Returned in clean packaging to protect your clothes.</p>
       </div>
       <div class="fade-up delay-400 bg-white rounded-2xl p-5 shadow-sm border border-sky-50 text-center">
-        <div class="text-3xl mb-3">🚗</div>
-        <h3 class="font-semibold text-gray-800 mb-1">Pickup &amp; Delivery</h3>
-        <p class="text-gray-500 text-xs leading-relaxed">We come to you — delivery fee ₦200/km.</p>
+        <div class="text-3xl mb-3">⏱️</div><h3 class="font-semibold text-gray-800 mb-1 text-sm">Ready in 48 Hours</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">Your clothes cleaned and returned within 48 hours.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── ORDER CTA ── -->
-<section class="bg-white py-14 md:py-16">
+<!-- ════ ORDER CTA ════ -->
+<section class="bg-white py-14">
   <div class="max-w-xl mx-auto px-4 text-center fade-up">
     <h2 class="text-gray-900 mb-3" style="font-family:'DM Serif Display',serif;font-size:clamp(1.5rem,4vw,2.25rem);">Seen a price you like?</h2>
-    <p class="text-gray-400 text-sm mb-7">Place your order now and we'll take care of the rest.</p>
-    <a href="order.html"
-       class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-semibold px-10 py-4 rounded-2xl text-base md:text-lg shadow-lg shadow-sky-200 transition-colors">
-      🧺 Place an Order
-    </a>
+    <p class="text-gray-400 text-sm mb-7">Place your order now and we'll take care of the rest. Ready in 48 hours.</p>
+    <a href="/order" class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-semibold px-10 py-4 rounded-2xl text-base shadow-lg shadow-sky-200 transition-colors">🧺 Place an Order</a>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
-<footer id="footer" class="bg-gray-900 text-white py-12">
+<!-- ════ FOOTER ════ -->
+<footer class="bg-gray-900 text-white py-12">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
       <div>
         <div class="flex items-center gap-3 mb-4">
           <div class="w-10 h-10 rounded-full bg-sky-500 flex items-center justify-center text-white font-bold flex-shrink-0" style="font-family:'DM Serif Display',serif;font-size:1.25rem;">A</div>
-          <div><div class="text-base md:text-lg text-white leading-tight" style="font-family:'DM Serif Display',serif;">AAIRA'S LAUNDRY</div><div class="text-xs text-sky-400 uppercase tracking-widest">Services</div></div>
+          <div><div class="text-base text-white leading-tight" style="font-family:'DM Serif Display',serif;">AAIRA'S LAUNDRY</div><div class="text-xs text-sky-400 uppercase tracking-widest">Services</div></div>
         </div>
         <p class="text-gray-400 text-sm leading-relaxed">Professional laundry care for Warri families and businesses.</p>
       </div>
       <div>
         <h4 class="font-semibold text-sky-400 uppercase text-xs tracking-widest mb-4">Quick Links</h4>
         <div class="space-y-2">
-          <a href="index.html"    class="block text-gray-300 text-sm hover:text-white transition-colors">🏠 Home</a>
-          <a href="services.html" class="block text-gray-300 text-sm hover:text-white transition-colors">🧺 Services &amp; Prices</a>
-          <a href="order.html"    class="block text-gray-300 text-sm hover:text-white transition-colors">📋 Place Order</a>
-          <a href="contact.html"  class="block text-gray-300 text-sm hover:text-white transition-colors">📍 Contact Us</a>
+          <a href="/"         class="block text-gray-300 text-sm hover:text-white transition-colors">🏠 Home</a>
+          <a href="/services" class="block text-gray-300 text-sm hover:text-white transition-colors">🧺 Services &amp; Prices</a>
+          <a href="/order"    class="block text-gray-300 text-sm hover:text-white transition-colors">📋 Place Order</a>
+          <a href="/contact"  class="block text-gray-300 text-sm hover:text-white transition-colors">📍 Contact Us</a>
         </div>
       </div>
       <div>
         <h4 class="font-semibold text-sky-400 uppercase text-xs tracking-widest mb-4">Contact Us</h4>
-        <a href="tel:08134112989" class="flex items-center gap-2.5 text-gray-300 text-sm mb-3 hover:text-white transition-colors">
-          <span class="w-8 h-8 bg-sky-600 rounded-full flex items-center justify-center text-sm flex-shrink-0">📞</span>08134112989
-        </a>
-        <a href="https://wa.me/2349127461108" target="_blank" rel="noopener" class="flex items-center gap-2.5 text-gray-300 text-sm hover:text-white transition-colors">
-          <span class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-sm flex-shrink-0">💬</span>+234 912 746 1108
-        </a>
+        <a href="tel:08134112989" class="flex items-center gap-2.5 text-gray-300 text-sm mb-3 hover:text-white transition-colors"><span class="w-8 h-8 bg-sky-600 rounded-full flex items-center justify-center flex-shrink-0">📞</span>08134112989</a>
+        <a href="https://wa.me/2349127461108" target="_blank" rel="noopener" class="flex items-center gap-2.5 text-gray-300 text-sm hover:text-white transition-colors"><span class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">💬</span>+234 912 746 1108</a>
         <p class="text-gray-400 text-xs mt-3">📍 Warri, Delta State, Nigeria</p>
-        <p class="text-gray-400 text-xs mt-1">🕐 Mon–Sat · 8AM–7PM</p>
+        <p class="text-gray-400 text-xs mt-1">🕐 Mon–Fri: 8:30AM–6PM · Sat: 8:30AM–4PM</p>
       </div>
     </div>
     <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
       <p class="text-gray-500 text-xs sm:text-sm">© <span class="yr"></span> AAIRA'S LAUNDRY SERVICES. All rights reserved.</p>
-      <p class="text-gray-600 text-xs">Warri, Nigeria · Open Mon–Sat</p>
+      <p class="text-gray-600 text-xs">Warri, Nigeria · Clothes ready in 48 hours</p>
     </div>
   </div>
 </footer>
@@ -170,34 +138,24 @@
 <a id="wa-float" href="https://wa.me/2349127461108" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.502 3.919 1.381 5.591L.057 23.5a.5.5 0 00.624.634l6.046-1.363A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.919 0-3.716-.503-5.267-1.378l-.362-.213-3.768.849.814-3.685-.232-.375A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
-
-<script src="shared.js"></script>
+<script src="/shared.js"></script>
 <script>
-  // ── PRICE CARDS ──
   const ITEMS = [
-    { name: 'Coloured Polo', price: 600 }, { name: 'White Polo', price: 700 },
-    { name: 'Ladies Polo', price: 400 },   { name: 'Jean Nicker', price: 600 },
-    { name: 'Jean Trouser', price: 700 },  { name: 'Singlet Top', price: 400 },
-    { name: 'Short Gown', price: 500 },    { name: 'Long Gown', price: 600 },
-    { name: 'Bag', price: 700 },           { name: 'Duvet', price: 2500 },
-    { name: 'Bedsheets', price: 1500 },    { name: 'Jump Suit', price: 800 },
-    { name: 'Nicker Material', price: 600 },{ name: 'Trouser Material', price: 600 },
-    { name: 'Kaftan', price: 1000 },       { name: 'Sweater', price: 700 },
-    { name: 'Complete Duvet Set', price: 3500 },{ name: 'Boxer', price: 300 },
-    { name: 'Rug', price: 600 },           { name: 'Singlet', price: 300 },
+    {name:'Coloured Polo',price:600},{name:'White Polo',price:700},{name:'Ladies Polo',price:400},
+    {name:'Jean Nicker',price:600},{name:'Jean Trouser',price:700},{name:'Singlet Top',price:400},
+    {name:'Short Gown',price:500},{name:'Long Gown',price:600},{name:'Bag',price:700},
+    {name:'Duvet',price:2500},{name:'Bedsheets',price:1500},{name:'Jump Suit',price:800},
+    {name:'Nicker Material',price:600},{name:'Trouser Material',price:600},{name:'Kaftan',price:1000},
+    {name:'Sweater',price:700},{name:'Complete Duvet Set',price:3500},{name:'Boxer',price:300},
+    {name:'Rug',price:600},{name:'Singlet',price:300},
   ];
   const grid = document.getElementById('price-grid');
   ITEMS.forEach(item => {
-    const card = document.createElement('div');
-    card.className = 'price-card fade-up bg-white border border-sky-100 rounded-2xl p-3 md:p-4 text-center shadow-sm';
-    card.innerHTML = `
-      <div class="text-xl md:text-2xl mb-1.5">🧴</div>
-      <div class="text-xs md:text-sm font-semibold text-gray-700 leading-tight mb-1">${item.name}</div>
-      <div class="text-sky-600 font-bold text-sm md:text-base">₦${item.price.toLocaleString()}</div>
-    `;
-    grid.appendChild(card);
+    const c = document.createElement('div');
+    c.className = 'price-card fade-up bg-white border border-sky-100 rounded-2xl p-3 md:p-4 text-center shadow-sm';
+    c.innerHTML = `<div class="text-xl md:text-2xl mb-1.5">🧴</div><div class="text-xs md:text-sm font-semibold text-gray-700 leading-tight mb-1">${item.name}</div><div class="text-sky-600 font-bold text-sm md:text-base">₦${item.price.toLocaleString()}</div>`;
+    grid.appendChild(c);
   });
-  // Re-observe newly added cards
   document.querySelectorAll('.fade-up:not(.visible)').forEach(el => io.observe(el));
 </script>
 </body>
