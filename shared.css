@@ -1,0 +1,184 @@
+/* ════════════════════════════════════════════════════
+   shared.css — AAIRA'S LAUNDRY SERVICES
+   Shared styles across all pages
+════════════════════════════════════════════════════ */
+
+/* ── Reset & Base ────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body  { font-family: 'DM Sans', sans-serif; background: #fff; color: #1e293b; overflow-x: hidden; }
+img, svg { display: block; max-width: 100%; }
+
+/* ── Fade animations ─────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.fade-in { opacity: 0; transition: opacity .65s ease; }
+.fade-up.visible, .fade-in.visible { opacity: 1; transform: translateY(0); }
+.delay-100 { transition-delay: .10s; }
+.delay-200 { transition-delay: .20s; }
+.delay-300 { transition-delay: .30s; }
+.delay-400 { transition-delay: .40s; }
+
+/* ── Hero background ─────────────────────────────── */
+.hero-bg {
+  background: linear-gradient(145deg, #EBF5FB 0%, #FAFEFF 55%, #E3F2FD 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(14,165,233,.09) 0%, transparent 50%),
+    radial-gradient(circle at 10% 80%, rgba(14,165,233,.06) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ── Floating bubbles ────────────────────────────── */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(14,165,233,.07);
+  pointer-events: none;
+  animation: floatUp 7s ease-in-out infinite;
+}
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-16px); }
+}
+
+/* ── Nav links ───────────────────────────────────── */
+.nav-link {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.nav-link:hover { color: #0ea5e9; }
+.nav-link.active { color: #0ea5e9; border-bottom-color: #0ea5e9; }
+
+/* ── Hamburger bars ──────────────────────────────── */
+.ham-bar {
+  display: block;
+  width: 22px; height: 2px;
+  background: #334155;
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+#menu-btn.open .ham-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#menu-btn.open .ham-bar:nth-child(2) { opacity: 0; }
+#menu-btn.open .ham-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile menu links ───────────────────────────── */
+.mob-link {
+  display: block;
+  padding: .625rem .75rem;
+  border-radius: .75rem;
+  color: #374151;
+  font-size: .875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .15s;
+}
+.mob-link:hover { background: #f0f9ff; }
+
+/* ── Price cards ─────────────────────────────────── */
+.price-card {
+  min-width: 0;
+  word-break: break-word;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+@media (hover: hover) {
+  .price-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(14,165,233,.13); }
+}
+
+/* ── Qty buttons ─────────────────────────────────── */
+.qty-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; font-weight: 600;
+  cursor: pointer; flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: background .15s;
+  user-select: none;
+  border: none;
+  background: #e0f2fe;
+  color: #0369a1;
+}
+.qty-btn:hover, .qty-btn:active { background: #bae6fd; }
+
+/* ── Form inputs — 16px prevents iOS auto-zoom ──── */
+.order-input {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: .75rem;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #e5e7eb;
+  padding: .75rem 1rem;
+  background: #f9fafb;
+  color: #1e293b;
+  transition: background .15s, outline .15s;
+}
+.order-input:focus {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+  background: #fff;
+}
+
+/* ── Service-type radio cards ────────────────────── */
+.service-lbl {
+  cursor: pointer;
+  border: 2px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1rem .75rem;
+  text-align: center;
+  transition: border-color .15s, background .15s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+}
+.service-lbl.active { border-color: #0ea5e9; background: #f0f9ff; }
+
+/* ── Contact cards ───────────────────────────────── */
+.contact-card { text-decoration: none; }
+
+/* ── Floating WhatsApp button ────────────────────── */
+#wa-float {
+  position: fixed; bottom: 18px; right: 14px; z-index: 1000;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 18px rgba(37,211,102,.45);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  text-decoration: none;
+  animation: pulseWA 2.5s infinite;
+  transition: transform .2s;
+  color: white;
+}
+#wa-float svg { width: 24px; height: 24px; }
+@media (min-width: 640px) {
+  #wa-float { bottom: 24px; right: 24px; width: 58px; height: 58px; }
+  #wa-float svg { width: 28px; height: 28px; }
+}
+@media (hover: hover) { #wa-float:hover { transform: scale(1.1); } }
+@keyframes pulseWA {
+  0%,100% { box-shadow: 0 4px 18px rgba(37,211,102,.45); }
+  50%     { box-shadow: 0 4px 32px rgba(37,211,102,.75); }
+}
+
+/* ── Extra-small phones (<375px): tighten padding ── */
+@media (max-width: 374px) {
+  .xs-pad { padding: 1.1rem !important; }
+}
